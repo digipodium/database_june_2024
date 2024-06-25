@@ -12,7 +12,8 @@ create table if not exists students(
 );
 
 -- adding single column
-alter table students add cls varchar(4) after name;
+alter table students 
+add cls varchar(4) after name;
 
 -- adding multiple column
 alter table
@@ -32,3 +33,9 @@ add firstname varchar(10) after id,
 add lastname varchar(10) after id;
 
 desc students;
+
+-- syntax
+alter table table_name
+[add column_name data_type after column_name],
+[drop column_name],
+[rename column column_name to new_column_name];
